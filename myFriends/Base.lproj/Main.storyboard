@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myFriends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,147 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d04-jJ-vat">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="126"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign In / Sign up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZc-Ea-Lt5">
+                                        <rect key="frame" x="21" y="34" width="189" height="32"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wikimedia-logo" translatesAutoresizingMaskIntoConstraints="NO" id="ciK-lY-hdf">
+                                        <rect key="frame" x="527" y="17" width="52" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="6bY-jp-GFA"/>
+                                            <constraint firstAttribute="width" constant="52" id="WKR-Cz-F41"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.17637886247797285" green="0.43817552000932425" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ciK-lY-hdf" secondAttribute="trailing" constant="21" id="0OP-FR-Bes"/>
+                                    <constraint firstItem="dZc-Ea-Lt5" firstAttribute="top" secondItem="d04-jJ-vat" secondAttribute="top" constant="34" id="AvF-fw-Gr0"/>
+                                    <constraint firstItem="ciK-lY-hdf" firstAttribute="top" secondItem="d04-jJ-vat" secondAttribute="top" constant="17" id="LEV-qm-N7h"/>
+                                    <constraint firstItem="dZc-Ea-Lt5" firstAttribute="leading" secondItem="d04-jJ-vat" secondAttribute="leading" constant="20" id="Mun-9J-3nV"/>
+                                    <constraint firstAttribute="height" constant="128" id="ssm-SZ-i4x"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWW-wg-7lQ" customClass="MaterailView" customModule="myFriends" customModuleProvider="target">
+                                <rect key="frame" x="20" y="80" width="560" height="138"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="EcE-Qy-ny9">
+                                        <rect key="frame" x="8" y="25" width="520" height="118"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb-icon" translatesAutoresizingMaskIntoConstraints="NO" id="cmV-OU-glr">
+                                                <rect key="frame" x="0.0" y="27" width="65" height="65"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVY-WJ-q5U" customClass="MaterailButton" customModule="myFriends" customModuleProvider="target">
+                                                <rect key="frame" x="105" y="44" width="415" height="30"/>
+                                                <color key="backgroundColor" red="0.17637886250000001" green="0.43817551999999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                <state key="normal" title="FACEBOOK LOGIN">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="EcE-Qy-ny9" firstAttribute="leading" secondItem="PWW-wg-7lQ" secondAttribute="leading" constant="20" id="03V-kH-RFL"/>
+                                    <constraint firstAttribute="height" constant="138" id="94w-85-Lz1"/>
+                                    <constraint firstAttribute="bottom" secondItem="EcE-Qy-ny9" secondAttribute="bottom" constant="10" id="SSs-Jl-dsj"/>
+                                    <constraint firstAttribute="trailing" secondItem="EcE-Qy-ny9" secondAttribute="trailing" constant="20" id="aMh-1j-lLF"/>
+                                    <constraint firstItem="EcE-Qy-ny9" firstAttribute="top" secondItem="PWW-wg-7lQ" secondAttribute="top" constant="10" id="d0Z-8B-fmj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IfV-qu-o2c" customClass="MaterailView" customModule="myFriends" customModuleProvider="target">
+                                <rect key="frame" x="20" y="237" width="560" height="343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email Login / Signup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFd-ec-HNr">
+                                        <rect key="frame" x="20" y="20" width="236" height="32"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQM-ED-X7L" customClass="MateraiTextField" customModule="myFriends" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="74" width="532" height="30"/>
+                                        <color key="backgroundColor" red="0.90089850569999996" green="0.90089850569999996" blue="0.90089850569999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Q8G-oM-JTP"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.36735111256544506" green="0.36735111256544506" blue="0.36735111256544506" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pP2-D4-Bhu" customClass="MateraiTextField" customModule="myFriends" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="131" width="532" height="30"/>
+                                        <color key="backgroundColor" red="0.90089850569999996" green="0.90089850569999996" blue="0.90089850569999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="s89-Ky-V7t"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.36735111259999997" green="0.36735111259999997" blue="0.36735111259999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhQ-9H-NJb" customClass="MaterailButton" customModule="myFriends" customModuleProvider="target">
+                                        <rect key="frame" x="158" y="198" width="257" height="30"/>
+                                        <color key="backgroundColor" red="0.17637886250000001" green="0.43817551999999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="mwz-XT-k05"/>
+                                            <constraint firstAttribute="width" constant="257" id="qAW-xW-siW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Login/Signup">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="XQM-ED-X7L" firstAttribute="leading" secondItem="IfV-qu-o2c" secondAttribute="leading" constant="20" id="3Y4-cm-GhD"/>
+                                    <constraint firstItem="VFd-ec-HNr" firstAttribute="top" secondItem="IfV-qu-o2c" secondAttribute="top" constant="20" id="5O3-Dw-zgo"/>
+                                    <constraint firstItem="rhQ-9H-NJb" firstAttribute="top" secondItem="pP2-D4-Bhu" secondAttribute="bottom" constant="37" id="AFX-Aw-hpX"/>
+                                    <constraint firstItem="pP2-D4-Bhu" firstAttribute="leading" secondItem="IfV-qu-o2c" secondAttribute="leading" constant="20" id="COw-90-iAr"/>
+                                    <constraint firstAttribute="height" constant="138" id="FIQ-Kk-wU5"/>
+                                    <constraint firstItem="pP2-D4-Bhu" firstAttribute="top" secondItem="XQM-ED-X7L" secondAttribute="bottom" constant="20" id="aCV-wt-iP3"/>
+                                    <constraint firstAttribute="trailing" secondItem="pP2-D4-Bhu" secondAttribute="trailing" constant="20" id="bL8-uy-kmV"/>
+                                    <constraint firstItem="rhQ-9H-NJb" firstAttribute="centerX" secondItem="IfV-qu-o2c" secondAttribute="centerX" id="bh4-us-cfL"/>
+                                    <constraint firstItem="XQM-ED-X7L" firstAttribute="top" secondItem="VFd-ec-HNr" secondAttribute="bottom" constant="20" id="q8H-uU-c13"/>
+                                    <constraint firstItem="VFd-ec-HNr" firstAttribute="leading" secondItem="IfV-qu-o2c" secondAttribute="leading" constant="20" id="tUT-EQ-FjQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="XQM-ED-X7L" secondAttribute="trailing" constant="20" id="umn-H7-KJa"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FIQ-Kk-wU5"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90089850567190222" green="0.90089850567190222" blue="0.90089850567190222" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="d04-jJ-vat" secondAttribute="trailing" id="1wV-xv-3gi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IfV-qu-o2c" secondAttribute="bottom" constant="20" id="ADD-h4-KXK"/>
+                            <constraint firstItem="d04-jJ-vat" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BVx-c6-6CE"/>
+                            <constraint firstItem="IfV-qu-o2c" firstAttribute="top" secondItem="PWW-wg-7lQ" secondAttribute="bottom" constant="20" id="Mi8-tM-26L"/>
+                            <constraint firstItem="PWW-wg-7lQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="PaS-af-ghg"/>
+                            <constraint firstItem="IfV-qu-o2c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Q9F-Rd-FFG"/>
+                            <constraint firstItem="IfV-qu-o2c" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="YMN-nQ-ejq"/>
+                            <constraint firstItem="d04-jJ-vat" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pf4-S0-WvC"/>
+                            <constraint firstItem="PWW-wg-7lQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tUc-y0-788"/>
+                            <constraint firstItem="PWW-wg-7lQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tg9-aY-YD0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="372" y="593"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Wikimedia-logo" width="1198" height="1198"/>
+        <image name="fb-icon" width="65" height="65"/>
+    </resources>
 </document>
