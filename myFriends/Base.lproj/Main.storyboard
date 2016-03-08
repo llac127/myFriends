@@ -95,16 +95,6 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pP2-D4-Bhu" customClass="MateraiTextField" customModule="myFriends" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="131" width="532" height="30"/>
-                                        <color key="backgroundColor" red="0.90089850569999996" green="0.90089850569999996" blue="0.90089850569999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="s89-Ky-V7t"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.36735111259999997" green="0.36735111259999997" blue="0.36735111259999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhQ-9H-NJb" customClass="MaterailButton" customModule="myFriends" customModuleProvider="target">
                                         <rect key="frame" x="158" y="198" width="257" height="30"/>
                                         <color key="backgroundColor" red="0.17637886250000001" green="0.43817551999999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -116,7 +106,20 @@
                                         <state key="normal" title="Login/Signup">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="attemptLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rHa-9Y-LDo"/>
+                                        </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pP2-D4-Bhu" customClass="MateraiTextField" customModule="myFriends" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="131" width="532" height="30"/>
+                                        <color key="backgroundColor" red="0.90089850569999996" green="0.90089850569999996" blue="0.90089850569999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="s89-Ky-V7t"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.36735111259999997" green="0.36735111259999997" blue="0.36735111259999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -153,10 +156,33 @@
                             <constraint firstItem="PWW-wg-7lQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tg9-aY-YD0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="XQM-ED-X7L" id="6vI-gl-8YL"/>
+                        <outlet property="passwordField" destination="pP2-D4-Bhu" id="nL1-PA-wMZ"/>
+                        <segue destination="cpN-10-7qS" kind="show" identifier="loggedIn" id="UH1-kT-ZJC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="372" y="593"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EFu-tY-trS">
+            <objects>
+                <viewController id="cpN-10-7qS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iPN-Hk-Hew"/>
+                        <viewControllerLayoutGuide type="bottom" id="KbW-dI-j74"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3uy-Nf-LV5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.17637886250000001" green="0.43817551999999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePb-Un-lOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="593"/>
         </scene>
     </scenes>
     <resources>
